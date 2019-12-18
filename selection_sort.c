@@ -11,7 +11,6 @@
 // Function declarations
 void printarray(int[],int);
 int getlength(int[]);
-void swap(int *,int *);
 void swaparray(int[],int,int);
 int findsmallest(int,int[],int);
 
