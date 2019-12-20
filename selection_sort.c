@@ -9,10 +9,10 @@
 #include <stdio.h>
 
 // Function declarations
-void printarray(int[],int);
+void printarray(int[], int);
 int getlength(int[]);
-void swaparray(int[],int,int);
-int findsmallest(int,int[],int);
+void swaparray(int[], int, int);
+int findsmallest(int, int[], int);
 
 int main()
 {
@@ -21,22 +21,22 @@ int main()
     int length = sizeof(list)/sizeof(int);
     
     printf("Original list: ");
-    printarray(list,length);
+    printarray(list, length);
         
     for (int start=0; start < length; start++)
     {
-        int smallest_i = findsmallest(start,list,length);
-        swaparray(list,smallest_i,start);
-        printarray(list,length);
+        int smallest_i = findsmallest(start, list, length);
+        swaparray(list, smallest_i,start);
+        printarray(list, length);
     }
 
     return 0;
 }
 
-void printarray(int array[],int length)
+void printarray(int array[], int length)
 {
     
-    for (int i=0; i<length;i++)
+    for (int i=0; i < length; i++)
     {
         printf("%d, ", array[i]);
     }
@@ -56,7 +56,7 @@ int findsmallest(int start_position, int array[], int length)
     int smallest_value = array[start_position];
     int smallest_index = start_position;
     
-    for (int index=start_position; index<length; index++)
+    for (int index = start_position; index < length; index++)
     {
         if (array[index] < smallest_value)
         {
